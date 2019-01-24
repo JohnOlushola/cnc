@@ -1,0 +1,30 @@
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.headline{
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+}
+
+.headline-code{
+  color: white;
+  background-color: rgb(139, 139, 139);
+  padding: 3px;
+  /* margin: 10px; */
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
