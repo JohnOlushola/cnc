@@ -15,10 +15,9 @@ router.get('/', function (req, res) {
   });
 });
 
-/* GET success page. */
-router.get('/success', function (req, res) {
-  res.render('success', { title: 'Code and Chill' });
-});
+router.get('/success', function(req, res){
+  res.render('success', {title: 'Code and Chill'});
+})
 
 /* GET home page. */
 router.post('/register', userController.register);
