@@ -9,7 +9,19 @@ exports.list_registered = function (req, res, next) {
         res.render('dashboard/index', {
             title: 'Dashboard',
             registered: registered,
-            listName: 'Registered',
         });
     });
+}
+
+exports.search = (req, res ) => {
+    var email = req.body.email;
+    User.find({"email": email})
+    .exec( (err, registered) => {
+        if (err) { return next(err) }
+
+        res.render('dashboard/index', {
+            title: 'Dashboard',
+            registered: registered,
+        });
+    })
 }

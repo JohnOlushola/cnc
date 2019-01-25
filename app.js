@@ -10,6 +10,8 @@ var session = require('express-session');
 var compression = require('compression');
 var helmet = require('helmet');
 var auth = require('./middlewares/auth');
+var bodyParser = require('body-parser');
+
 
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -28,6 +30,8 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
