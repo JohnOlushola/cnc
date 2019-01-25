@@ -9,6 +9,7 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var compression = require('compression');
 var helmet = require('helmet');
+var auth = require('./middlewares/auth');
 
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -16,6 +17,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var indexRouter = require('./routes/index');
+var dashboardRouter = require('./routes/dashboard');
 
 var app = express();
 
@@ -39,6 +41,7 @@ app.use(helmet());
 
 app.use(compression()); //Compress all routes
 app.use('/', indexRouter);
+app.use('/dashboard', auth.required, dashboardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

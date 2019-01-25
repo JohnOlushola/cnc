@@ -18,4 +18,12 @@ router.get('/', function (req, res) {
 /* GET home page. */
 router.post('/register', userController.register);
 
+/* GET login page. */
+router.get('/login', userController.login_get);
+
+/* GET home page. */
+router.post('/login', userController.login_post);
+
+router.get('/logout', userController.logout);
+
 module.exports = router;
