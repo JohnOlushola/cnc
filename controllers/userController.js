@@ -49,7 +49,7 @@ exports.login_get = (req, res) => {
     });
 }
 
-exports.login_post = (req, res) => {
+exports.login_post = (req, res, next) => {
     var destUrl = req.session.destUrl;
     if (req.body.email && req.body.password) {
         User.findOne({ email: req.body.email }, function (err, user) {
