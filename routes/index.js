@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
   });
 });
 
-/* GET home page. */
+/* POST form data. */
 router.post('/register', userController.register);
 
 /* GET login page. */
@@ -24,6 +24,14 @@ router.get('/login', userController.login_get);
 /* GET home page. */
 router.post('/login', userController.login_post);
 
+/* Logout. */
 router.get('/logout', userController.logout);
+
+/* GET update page. */
+router.get('/update', userController.update_get);
+
+/* POST update form data. */
+router.post('/update', userController.update_post);
+
 
 module.exports = router;

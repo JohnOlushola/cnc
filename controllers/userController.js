@@ -83,12 +83,24 @@ exports.login_post = (req, res, next) => {
     }
 }
 
-exports.logout = function (req, res) {
+exports.logout = (req, res) => {
     req.session.destroy(function (err) {
         if (err) {
             return next(err)
         }
 
         res.redirect(302, "/")
+    })
+}
+
+exports.update_get = (req, res) => {
+    res.render('update', {title: 'Update'});
+}
+
+exports.update_post = (req, res) => {
+    User.findOneAndUpdate({email: req.body.email}, {phone: req.body.phone}, (err, callback) => {
+        if (err) { return err }
+
+        res.render('success', {title: 'Code and Chill', update: true});
     })
 }

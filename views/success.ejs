@@ -15,7 +15,7 @@
 <body class="bg-light d-flex flex-column h-100 text-center">
   <main role="main" class="flex-shrink-0">
     <div class="container">
-      <h1 class="mt-5 display-2 head head-green">CONGRATULATIONS</h1>
+      <%- update ? '<h1 class="mt-5 display-2 head head-green">Update Successfull</h1>' : '<h1 class="mt-5 display-2 head head-green">CONGRATULATIONS</h1>' %>
       <p class="lead h1">Thanks for registering. <code>print("Welcome, <%= typeof name!='undefined' ? name : '' %> to <%= title %>")</code></p>
       <hr class="mb-4">
     </div>
