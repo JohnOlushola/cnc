@@ -28,7 +28,7 @@ exports.register = (req, res, next) => {
                     if (err) {
                         return next(err)
                     } else {
-                        res.render('success', { title: 'Code and Chill', name: user.firstName });
+                        res.render('success', { title: 'Code and Chill', name: user.firstName, update: false });
                     }
                 });
             }

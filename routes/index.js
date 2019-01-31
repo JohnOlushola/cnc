@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var userController = require('../controllers/userController');
+var projectController = require('../controllers/projectController');
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -33,5 +34,10 @@ router.get('/update', userController.update_get);
 /* POST update form data. */
 router.post('/update', userController.update_post);
 
+/* GET project board. */
+router.get('/project', projectController.project_get);
+
+/* POST project board's form data. */
+router.post('/project/add', projectController.project_add);
 
 module.exports = router;
