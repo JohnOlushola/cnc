@@ -2,20 +2,63 @@
 <html class="h-100">
 
 <head>
-  <title>Success - <%= title %> </title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <link rel='stylesheet' href='/stylesheets/mailing.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Success - <%= title %> </title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- Application style -->
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 </head>
 
-<body class="bg-light d-flex flex-column h-100 text-center">
-  <main role="main" class="flex-shrink-0">
-    <div class="container">
-      <%- update ? '<h1 class="mt-5 display-2 head head-green">Update Successfull</h1>' : '<h1 class="mt-5 display-2 head head-green">CONGRATULATIONS</h1>' %>
+<bod class="bg-light">
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Code and Chill is born of the idea of re-introducing Computer Science to students in
+              a less- tensed environment as a broad course with diverse branches that accommodates innovation in
+              different fields of study built on creative thinking while exposing the thrill and fun in Computer
+              Science; with major focus on fostering creativity and equipping students with the skills needed to solve
+              problems and create an environment that thrives on innovation which puts BUCC on the map.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=johntemiloiluwa.o@gmail.com" class="text-white">Email
+                  Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <strong>CNC</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="py-5 container">
+      <%- update ? '<h2 class="head head-green">Update Successfull</h2>' : '<h2 class="head head-green">CONGRATULATIONS</h2>' %>
       <p class="lead h1">Thanks for registering. <code>print("Welcome, <%= typeof name!='undefined' ? name : '' %> to <%= title %>")</code></p>
       <hr class="mb-4">
     </div>
@@ -37,18 +80,15 @@
 
   </main>
 
-  <footer class="footer mt-auto py-3">
+  <footer class="text-muted">
     <div class="container">
-      <p class="mb-1">&copy; 2019 Code and Chill | <a href="https://www.bucc.club">BUCC</a></p>
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>CNC &copy; 2019</p>
+      <p><a href="https://bucc.club/">BUCC</a></p>
     </div>
   </footer>
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="/docs/4.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP"
-    crossorigin="anonymous"></script>
 </body>
 </body>
 

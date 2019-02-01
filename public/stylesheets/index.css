@@ -1,0 +1,112 @@
+
+h1 {
+  font-size: 4.5rem;
+}
+
+.navbar-dark .navbar-brand {
+    color: #0ea2da;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0ea2da;
+  border-color: #0ea2da;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  background-color: #0ea2da;
+  border-color: #0ea2da;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+a{
+  color: #0ea2da;
+}
+
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.938)!important;
+}
+
+.bg-light {
+  background-color: #00a4e00f!important;
+}
+
+.head{
+  font-family: 'VT323', monospace;
+}
+
+.head-green{
+  color: green;
+}
+
+.headline{
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+}
+
+.headline-code{
+  color: white;
+  background-color: rgb(139, 139, 139);
+  padding: 3px;
+  margin: 10px;
+}
+
+.jumbotron {
+  background-color: black;
+  border-radius: 0;
+  /* background-image: url('/images/headline.jpg') */
+}
+
+.jumbotron-heading {
+  color: white;
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    margin-top: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: rgba(0, 0, 0, 0.938)!important;
+  }
+  
+  footer p {
+    margin-bottom: .35rem;
+  }
+
+  .lh-condensed { line-height: 1.25; }
+
+.headline{
+  font-family: 'Source Code Pro', monospace;
+  text-transform: uppercase;
+}
+
+
+  @media (min-width: 576px){
+    .jumbotron {
+      padding: 16rem 2rem;
+    }
+  }

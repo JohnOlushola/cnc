@@ -5,9 +5,14 @@ var projectController = require('../controllers/projectController');
 
 /* GET home page. */
 router.get('/', function (req, res) {
+  res.render('index', {title: 'Code and Chill'});
+});
+
+/* GET register page. */
+router.get('/register', function (req, res) {
   var error = req.flash('error')[0];
   var success = req.flash('success')[0];
-  res.render('index', {
+  res.render('register', {
     title: 'Code and Chill', 
     message: {
       error: error,
@@ -39,5 +44,16 @@ router.get('/project', projectController.project_get);
 
 /* POST project board's form data. */
 router.post('/project/add', projectController.project_add);
+
+
+
+
+/*
+ DEV: GET home page. 
+ */
+// router.get('/success', function (req, res) {
+//   res.render('success', {title: 'Code and Chill', update: false});
+// });
+
 
 module.exports = router;
