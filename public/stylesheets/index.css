@@ -71,6 +71,15 @@ a{
   /* background-image: url('/images/headline.jpg') */
 }
 
+.cover{
+  background:linear-gradient( rgba(0, 0, 0, 0.801) 100%, rgba(0, 0, 0, 0.808)100%),url('/images/cover.jpg');
+  height: auto; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+}
+
 .jumbotron-heading {
   color: white;
 }

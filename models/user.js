@@ -13,13 +13,14 @@ var UserSchema = new Schema(
     aoi: { type: String, max: 120 },
     level: { type: Number, enum: [100, 200, 300, 400], required: true },
     role: { type: String, default: 'Student', required: true },
+    attended: { type: Number, required: true, default: 0},
     timestamps: {
       created_at: { type: Date, default: Date.now(), required: true },
       updated_at: { type: Date, default: Date.now(), required: true }
     }
   }
 );
-
+ 
 // hashing password before saving to db
 // UserSchema.pre('save', function (next) {
 //   this.password = sha256(this.password)

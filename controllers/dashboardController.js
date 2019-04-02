@@ -2,7 +2,7 @@ var User = require('../models/user');
 var moment = require('moment');
 
 exports.list_registered = function (req, res, next) {
-    User.find({})
+    User.find({}).sort({level: -1})
     .exec(function (err, registered) {
         if (err) { return next(err) }
         
