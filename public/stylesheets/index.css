@@ -68,7 +68,6 @@ a{
   background-color: black;
   border-radius: 0;
   margin-bottom:0; 
-  /* background-image: url('/images/headline.jpg') */
 }
 
 .cover{
@@ -116,6 +115,7 @@ a{
 
 
 @media (min-width: 576px){
+
   .jumbotron {
       padding: 16rem 2rem;
     }
@@ -172,6 +172,11 @@ a{
 and (min-device-width: 414px) 
 and (max-device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3) { 
+
+  .cover{
+    background: black;
+  }
+
   .jumbotron{
     padding: 9rem 1rem;
   }
